@@ -95,7 +95,8 @@ function handleContactClick(type) {
       window.open("https://www.linkedin.com/in/yousef-el-basuony/", "_blank")
       break
     case "github":
-      window.open("https://github.com/https://github.com/youssef800900-https://github.com/", "_blank")
+      // Fixed the broken URL here
+      window.open("https://github.com/yousef-elbasuony", "_blank")
       break
   }
 }
