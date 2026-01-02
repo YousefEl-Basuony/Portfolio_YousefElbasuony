@@ -76,14 +76,19 @@ function createFloatingParticles() {
 // Handle contact clicks
 function handleContactClick(type) {
   if (type === "connect") {
-    // Scroll to contact section
-    const contactSection = document.querySelector(".contact-section")
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      })
-    }
+    // Switch to projects section first since contact is located there
+    handleSectionChange("projects")
+    
+    // Scroll to contact section after a brief delay to ensure it's visible
+    setTimeout(() => {
+      const contactSection = document.querySelector(".contact-section")
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        })
+      }
+    }, 100)
     return
   }
 
